@@ -9,7 +9,14 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import authRoutes from "./src/routes/auth.js";
+import userRoutes from "./src/routes/users.js";
+import postRoutes from "./src/routes/posts.js";
 import { register } from "./src/controllers/auth.js";
+import { createPost } from "./src/controllers/posts.js";
+import { verifyToken } from "./src/middleware/auth.js";
+import User from "./src/models/user.js";
+import Post from "./src/models/post.js";
+import { users, posts } from "./src/data/index.js";
 
 /* Configurations */
 const __filename = fileURLToPath(import.meta.url);
@@ -39,18 +46,32 @@ const upload = multer({ storage });
 
 /* Routes with Files */
 app.post("/auth/register", upload.single("picture"), register);
+app.post("/posts", verifyToken, upload.single("picture"), createPost);
 
 /* Routes */
 app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
+app.use("/posts", postRoutes);
 
 /* Moongose Setup */
 const PORT = process.env.PORT || 6001;
+
+if (mongoose.models.User) {
+  delete mongoose.models.User;
+}
+if (mongoose.models.Post) {
+  delete mongoose.models.Post;
+}
+
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+
+    // User.insertMany(users);
+    // Post.insertMany(posts);
   })
   .catch((err) => console.log(`${err} did not connect`));
