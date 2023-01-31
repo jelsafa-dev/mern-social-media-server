@@ -278,3 +278,30 @@ export const posts = [
     ],
   },
 ];
+
+export const adverts = [
+  {
+    _id: new mongoose.Types.ObjectId(),
+    title: "Sweat from Home with Our Workout Plan!",
+    description:
+      "Get fit without leaving your home! Our comprehensive workout plan includes everything you need to get in shape and feel great. Try it today!",
+    website: "https://www.example.com/homeworkouts",
+    picturePath: "ad1.jpg",
+  },
+  {
+    _id: new mongoose.Types.ObjectId(),
+    title: "Explore the World with Our Travel Deals!",
+    description:
+      "Take a break from the daily grind and discover new and exciting destinations! Browse our travel deals and find your next adventure today!",
+    website: "https://www.example.com/travel",
+    picturePath: "ad2.jpg",
+  },
+  {
+    _id: new mongoose.Types.ObjectId(),
+    title: "Find Your New Look with Our Fashion Picks!",
+    description:
+      "Discover the latest trends and elevate your style! Browse our hand-selected fashion picks and find your new look today!",
+    website: "https://www.example.com/fashion",
+    picturePath: "ad3.jpg",
+  },
+];
