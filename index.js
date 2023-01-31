@@ -68,8 +68,8 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
-    User.insertMany(users);
-    Post.insertMany(posts);
-    Advert.insertMany(adverts);
+    // User.insertMany(users);
+    // Post.insertMany(posts);
+    // Advert.insertMany(adverts);
   })
   .catch((err) => console.log(`${err} did not connect`));
