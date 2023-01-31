@@ -196,6 +196,8 @@ export const posts = [
     comments: [
       {
         _id: new mongoose.Types.ObjectId(),
+        userId: userIds[1],
+        firstName: users[1].firstName,
         firstName: users[1].firstName,
         lastName: users[1].lastName,
         userPicturePath: users[1].picturePath,
@@ -203,6 +205,7 @@ export const posts = [
       },
       {
         _id: new mongoose.Types.ObjectId(),
+        userId: userIds[9],
         firstName: users[9].firstName,
         lastName: users[9].lastName,
         userPicturePath: users[9].picturePath,
@@ -210,6 +213,7 @@ export const posts = [
       },
       {
         _id: new mongoose.Types.ObjectId(),
+        userId: userIds[4],
         firstName: users[4].firstName,
         lastName: users[4].lastName,
         userPicturePath: users[4].picturePath,
@@ -217,6 +221,7 @@ export const posts = [
       },
       {
         _id: new mongoose.Types.ObjectId(),
+        userId: userIds[5],
         firstName: users[5].firstName,
         lastName: users[5].lastName,
         userPicturePath: users[5].picturePath,
@@ -224,6 +229,7 @@ export const posts = [
       },
       {
         _id: new mongoose.Types.ObjectId(),
+        userId: userIds[7],
         firstName: users[7].firstName,
         lastName: users[7].lastName,
         userPicturePath: users[7].picturePath,
@@ -248,6 +254,7 @@ export const posts = [
     comments: [
       {
         _id: new mongoose.Types.ObjectId(),
+        userId: userIds[8],
         firstName: users[8].firstName,
         lastName: users[8].lastName,
         userPicturePath: users[8].picturePath,
@@ -255,6 +262,7 @@ export const posts = [
       },
       {
         _id: new mongoose.Types.ObjectId(),
+        userId: userIds[9],
         firstName: users[9].firstName,
         lastName: users[9].lastName,
         userPicturePath: users[9].picturePath,
@@ -263,6 +271,7 @@ export const posts = [
       },
       {
         _id: new mongoose.Types.ObjectId(),
+        userId: userIds[5],
         firstName: users[5].firstName,
         lastName: users[5].lastName,
         userPicturePath: users[5].picturePath,
@@ -270,10 +279,70 @@ export const posts = [
       },
       {
         _id: new mongoose.Types.ObjectId(),
+        userId: userIds[1],
         firstName: users[1].firstName,
         lastName: users[1].lastName,
         userPicturePath: users[1].picturePath,
         comment: "I need this in my garage ASAP! 😍 #DreamCar",
+      },
+    ],
+  },
+  {
+    _id: new mongoose.Types.ObjectId(),
+    userId: userIds[2],
+    firstName: users[2].firstName,
+    lastName: users[2].lastName,
+    location: users[2].location,
+    userPicturePath: users[2].picturePath,
+    description:
+      "City of love 💕 Paris, je t'aime 🇫🇷❤ \n️ Exploring the streets of this beautiful city, sipping coffee at a sidewalk café, and falling in love with it all over again 🥐🍵 What's your favorite Parisian experience? #paris #cityoflove #travel",
+    picturePath: "post1.jpg",
+    likes: new Map([
+      [userIds[3], true],
+      [userIds[4], true],
+    ]),
+    comments: [
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[1],
+        firstName: users[1].firstName,
+        lastName: users[1].lastName,
+        userPicturePath: users[1].picturePath,
+        comment: "I love the view from the top of the Eiffel Tower 🗼❤️",
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[3],
+        firstName: users[3].firstName,
+        lastName: users[3].lastName,
+        userPicturePath: users[3].picturePath,
+        comment: "The Louvre Museum is a must-see for me 🎨👀",
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[5],
+        firstName: users[5].firstName,
+        lastName: users[5].lastName,
+        userPicturePath: users[5].picturePath,
+        comment:
+          "Walking along the Seine river at sunset is simply breathtaking 🌅",
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[7],
+        firstName: users[7].firstName,
+        lastName: users[7].lastName,
+        userPicturePath: users[7].picturePath,
+        comment: "Can't resist the pastries from Ladurée 🍰🤤",
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[9],
+        firstName: users[9].firstName,
+        lastName: users[9].lastName,
+        userPicturePath: users[9].picturePath,
+        comment:
+          "A picnic in the Luxembourg Gardens is my idea of a perfect day in Paris 🌸🧺",
       },
     ],
   },
@@ -286,7 +355,7 @@ export const adverts = [
     description:
       "Get fit without leaving your home! Our comprehensive workout plan includes everything you need to get in shape and feel great. Try it today!",
     website: "https://www.example.com/homeworkouts",
-    picturePath: "ad1.jpg",
+    picturePath: "workout.jpg",
   },
   {
     _id: new mongoose.Types.ObjectId(),
@@ -294,7 +363,7 @@ export const adverts = [
     description:
       "Take a break from the daily grind and discover new and exciting destinations! Browse our travel deals and find your next adventure today!",
     website: "https://www.example.com/travel",
-    picturePath: "ad2.jpg",
+    picturePath: "travel.jpg",
   },
   {
     _id: new mongoose.Types.ObjectId(),
@@ -302,6 +371,6 @@ export const adverts = [
     description:
       "Discover the latest trends and elevate your style! Browse our hand-selected fashion picks and find your new look today!",
     website: "https://www.example.com/fashion",
-    picturePath: "ad3.jpg",
+    picturePath: "fashion.jpg",
   },
 ];
