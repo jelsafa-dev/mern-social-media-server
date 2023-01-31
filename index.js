@@ -38,7 +38,8 @@ const storage = multer.diskStorage({
     cb(null, "public/assets");
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname);
+    const filename = `${Math.round(Math.random() * 1e9)}`;
+    cb(null, `${filename}${path.extname(file.originalname)}`);
   },
 });
 
