@@ -296,7 +296,7 @@ export const posts = [
     userPicturePath: users[2].picturePath,
     description:
       "City of love 💕 Paris, je t'aime 🇫🇷❤ \n️ Exploring the streets of this beautiful city, sipping coffee at a sidewalk café, and falling in love with it all over again 🥐🍵 What's your favorite Parisian experience? #paris #cityoflove #travel",
-    picturePath: "post1.jpg",
+    picturePath: "post2.jpg",
     likes: new Map([
       [userIds[3], true],
       [userIds[4], true],
@@ -343,6 +343,146 @@ export const posts = [
         userPicturePath: users[9].picturePath,
         comment:
           "A picnic in the Luxembourg Gardens is my idea of a perfect day in Paris 🌸🧺",
+      },
+    ],
+  },
+  {
+    _id: new mongoose.Types.ObjectId(),
+    userId: userIds[3],
+    firstName: users[3].firstName,
+    lastName: users[3].lastName,
+    location: users[3].location,
+    userPicturePath: users[3].picturePath,
+    description:
+      "Feeling blessed to be standing in front of the iconic Christ the Redeemer statue in Rio de Janeiro 🙏❤️ The view from the top is truly breathtaking! Who else has been here? #RiodeJaneiro #ChristtheRedeemer",
+    picturePath: "post3.jpg",
+    likes: new Map([
+      [userIds[1], true],
+      [userIds[2], true],
+      [userIds[3], true],
+      [userIds[4], true],
+      [userIds[5], true],
+    ]),
+    comments: [
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[2],
+        firstName: users[2].firstName,
+        lastName: users[2].lastName,
+        userPicturePath: users[2].picturePath,
+        comment: "What an amazing shot! I've always wanted to visit Brazil 🇧🇷",
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[8],
+        firstName: users[8].firstName,
+        lastName: users[8].lastName,
+        userPicturePath: users[8].picturePath,
+        comment:
+          "That view is everything! I went there last year and it was one of the highlights of my trip 💕",
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[5],
+        firstName: users[5].firstName,
+        lastName: users[5].lastName,
+        userPicturePath: users[5].picturePath,
+        comment:
+          "I love how the statue stands tall and proud, watching over the city. So much history and culture in one place 🌎",
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[9],
+        firstName: users[9].firstName,
+        lastName: users[9].lastName,
+        userPicturePath: users[9].picturePath,
+        comment:
+          "Definitely a must-visit destination for any world traveler! The history and beauty of this statue is awe-inspiring 🙏 #Blessed",
+      },
+    ],
+  },
+  {
+    _id: new mongoose.Types.ObjectId(),
+    userId: userIds[4],
+    firstName: users[4].firstName,
+    lastName: users[4].lastName,
+    location: users[4].location,
+    userPicturePath: users[4].picturePath,
+    description:
+      "Feeling the energy of the city that never sleeps 🗽❤️ Exploring the streets of New York and taking in all its beauty. From the bustling Times Square to the iconic Central Park, this city has it all! Have you been to the Big Apple before? #NewYork #CityLife",
+    picturePath: "post4.jpg",
+    likes: new Map([[userIds[3], true]]),
+    comments: [
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[1],
+        firstName: users[1].firstName,
+        lastName: users[1].lastName,
+        userPicturePath: users[1].picturePath,
+        comment:
+          "I can feel the excitement just looking at this photo! New York is truly one of a kind 💕",
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[5],
+        firstName: users[5].firstName,
+        lastName: users[5].lastName,
+        userPicturePath: users[5].picturePath,
+        comment:
+          "I love how you captured the energy of the city. I've been there a few times and never tire of it 🗽",
+      },
+    ],
+  },
+  {
+    _id: new mongoose.Types.ObjectId(),
+    userId: userIds[5],
+    firstName: users[5].firstName,
+    lastName: users[5].lastName,
+    location: users[5].location,
+    userPicturePath: users[5].picturePath,
+    description:
+      "Exploring the world of AI art and I'm blown away 🎨❤️ With the help of advanced algorithms, artists are now able to create stunning digital masterpieces. Have you seen any amazing AI art lately? #AiArt #DigitalArt #Innovation",
+    picturePath: "post5.jpg",
+    likes: new Map([
+      [userIds[3], true],
+      [userIds[4], true],
+    ]),
+    comments: [
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[6],
+        firstName: users[6].firstName,
+        lastName: users[6].lastName,
+        userPicturePath: users[6].picturePath,
+        comment:
+          "I recently saw an AI-generated portrait and I was shocked at how realistic it was! The possibilities of AI art are truly endless 💡",
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[2],
+        firstName: users[2].firstName,
+        lastName: users[2].lastName,
+        userPicturePath: users[2].picturePath,
+        comment:
+          "I love how AI art pushes the boundaries of traditional art and takes it in a new direction 🎨",
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[4],
+        firstName: users[4].firstName,
+        lastName: users[4].lastName,
+        userPicturePath: users[4].picturePath,
+        comment:
+          "The use of AI in art is just the beginning. I can't wait to see what new forms of creativity will emerge in the future 🚀 #ArtAndTechnology",
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[7],
+        firstName: users[7].firstName,
+        lastName: users[7].lastName,
+        userPicturePath: users[7].picturePath,
+        comment:
+          "AI art has opened up so many new opportunities for artists and allows them to experiment in ways they never could before 💫 #Innovation",
       },
     ],
   },
